@@ -100,3 +100,31 @@ Times of India
 
 Bot ID: 3 Recieved webpage link at : https://www.cricbuzz.com/
 Cricbuzz
+
+
+```
+
+## Customization
+
+To customize the starting URLs or add more web crawlers:
+
+1. Open the `Main.java` file.
+2. Add more instances of `WebCrawl` with the desired URLs:
+    ```java
+    bot.add(new WebCrawl("https://example.com/", 4));
+    ```
+
+## Limitations
+
+- The current implementation does not handle loops or duplicate links across different web crawlers.
+- The program may run into issues with sites that block web crawlers (like CAPTCHA or IP rate-limiting).
+- External links (URLs outside the base domain) are not filtered.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [JSoup Library](https://jsoup.org/) for easy HTML parsing and web scraping in Java.
+
